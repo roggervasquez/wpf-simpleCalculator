@@ -37,9 +37,15 @@
                Grid.ColumnSpan="4"/>
         
         <!-- First Row -->
-        <Button x:Name="acButton"  Content="AC" Grid.Row="1"/>
-        <Button x:Name="signButton" Content="+/-" Grid.Row="1" Grid.Column="1"/>
-        <Button x:Name="percentageButton" Content="%" Grid.Row="1" Grid.Column="2"/>
+        <Button x:Name="acButton"  
+                Foreground="Black"
+                Content="AC" Grid.Row="1"/>
+        <Button x:Name="signButton" 
+                Foreground="Black"
+                Content="+/-" Grid.Row="1" Grid.Column="1"/>
+        <Button x:Name="percentageButton" 
+                Foreground="Black"
+                Content="%" Grid.Row="1" Grid.Column="2"/>
         <Button x:Name="divideButton" 
                 Background="{StaticResource operatorColors}"
                 Click="OperationButton_Click" 

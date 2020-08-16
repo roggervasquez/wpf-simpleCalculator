@@ -8,5 +8,14 @@
         <SolidColorBrush x:Key="numberColors" Color="#444444"></SolidColorBrush>
         <SolidColorBrush x:Key="operatorColors" Color="Orange" ></SolidColorBrush>
         <SolidColorBrush x:Key="numberFontColor" Color="White" ></SolidColorBrush>
+        
+        <!--Define styles-->
+        <Style TargetType="Button">
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="FontSize" Value="20" ></Setter>
+            <Setter Property="Margin" Value="3"></Setter>
+            
+        </Style>
+        
     </Application.Resources>
 </Application>
