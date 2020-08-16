@@ -22,7 +22,7 @@
             <RowDefinition Height="*" />
             
         </Grid.RowDefinitions>
-        <Label Content="0"
+        <Label x:Name="resultLabel"   Content="0"
                HorizontalAlignment="Right"
                VerticalAlignment="Bottom"
                FontSize="60"
@@ -30,33 +30,33 @@
                Grid.ColumnSpan="4"/>
         
         <!-- First Row -->
-        <Button Content="AC" Grid.Row="1"/>
-        <Button Content="+/-" Grid.Row="1" Grid.Column="1"/>
-        <Button Content="%" Grid.Row="1" Grid.Column="2"/>
-        <Button Content="/" Grid.Row="1" Grid.Column="3"/>
+        <Button x:Name="acButton"  Content="AC" Grid.Row="1"/>
+        <Button x:Name="signButton" Content="+/-" Grid.Row="1" Grid.Column="1"/>
+        <Button x:Name="percentageButton" Content="%" Grid.Row="1" Grid.Column="2"/>
+        <Button x:Name="divideButton" Content="/" Grid.Row="1" Grid.Column="3"/>
 
         <!-- Second  Row -->
-        <Button Content="7" Grid.Row="2"/>
-        <Button Content="8" Grid.Row="2" Grid.Column="1"/>
-        <Button Content="9" Grid.Row="2" Grid.Column="2"/>
-        <Button Content="*" Grid.Row="2" Grid.Column="3"/>
+        <Button x:Name="n7Button"  Content="7" Grid.Row="2"/>
+        <Button x:Name="n8Button"  Content="8" Grid.Row="2" Grid.Column="1"/>
+        <Button x:Name="n9Button" Content="9" Grid.Row="2" Grid.Column="2"/>
+        <Button x:Name="multiplyButton" Content="*" Grid.Row="2" Grid.Column="3"/>
 
         <!-- third  Row -->
-        <Button Content="4" Grid.Row="3"/>
-        <Button Content="5" Grid.Row="3" Grid.Column="1"/>
-        <Button Content="6" Grid.Row="3" Grid.Column="2"/>
-        <Button Content="-" Grid.Row="3" Grid.Column="3"/>
+        <Button x:Name="n4Button" Content="4" Grid.Row="3"/>
+        <Button x:Name="n5Button" Content="5" Grid.Row="3" Grid.Column="1"/>
+        <Button x:Name="n6Button" Content="6" Grid.Row="3" Grid.Column="2"/>
+        <Button x:Name="substractButton" Content="-" Grid.Row="3" Grid.Column="3"/>
 
         <!-- Fourth  Row -->
-        <Button Content="1" Grid.Row="4"/>
-        <Button Content="2" Grid.Row="4" Grid.Column="1"/>
-        <Button Content="3" Grid.Row="4" Grid.Column="2"/>
-        <Button Content="+" Grid.Row="4" Grid.Column="3"/>
+        <Button  x:Name="n1Button"  Content="1" Grid.Row="4"/>
+        <Button  x:Name="n2Button"  Content="2" Grid.Row="4" Grid.Column="1"/>
+        <Button  x:Name="n3Button"  Content="3" Grid.Row="4" Grid.Column="2"/>
+        <Button  x:Name="addButton" Content="+" Grid.Row="4" Grid.Column="3"/>
 
         <!-- Fifth  Row -->
-        <Button Content="0" Grid.Row="5" Grid.ColumnSpan="2"/>
-        <Button Content="." Grid.Row="5" Grid.Column="2"/>
-        <Button Content="=" Grid.Row="5" Grid.Column="3"/>
+        <Button x:Name="n0Button"  Content="0" Grid.Row="5" Grid.ColumnSpan="2"/>
+        <Button x:Name="periodButton"  Content="." Grid.Row="5" Grid.Column="2" />
+        <Button x:Name="equalButton"  Content="=" Grid.Row="5" Grid.Column="3"/>
         
 
 

@@ -23,6 +23,9 @@ namespace wpf_simpleCalculator
         public MainWindow()
         {
             InitializeComponent();
+           
         }
+
+      
     }
 }
