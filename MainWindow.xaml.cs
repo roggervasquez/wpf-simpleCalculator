@@ -31,6 +31,15 @@ namespace wpf_simpleCalculator
             signButton.Click += SignButton_Click;
             percentageButton.Click += PercentageButton_Click;
             equalButton.Click += EqualButton_Click;
+            periodButton.Click += PeriodButton_Click;
+        }
+
+        private void PeriodButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(!resultLabel.Content.ToString().Contains(".") )
+            {
+                resultLabel.Content = $"{resultLabel.Content}.";
+            }
         }
 
         private void EqualButton_Click(object sender, RoutedEventArgs e)
@@ -38,23 +47,31 @@ namespace wpf_simpleCalculator
             double newNumber = 0;
             if (double.TryParse(resultLabel.Content.ToString(), out newNumber))
             {
-               switch (this.selectedOperator)
+               try
                 {
-                    case OperationType.Addition:
-                        result = SimpleMath.Add(this.lastNumber, newNumber);
-                        break;
-                    case OperationType.Substraction:
-                        result = SimpleMath.Substract(this.lastNumber, newNumber);
-                        break;
-                    case OperationType.Multiplication:
-                        result = SimpleMath.Multiply(this.lastNumber, newNumber);
-                        break;
-                    case OperationType.Division:
-                        result = SimpleMath.Divide(this.lastNumber, newNumber);
-                        break;
+                    switch (this.selectedOperator)
+                    {
+                        case OperationType.Addition:
+                            result = SimpleMath.Add(this.lastNumber, newNumber);
+                            break;
+                        case OperationType.Substraction:
+                            result = SimpleMath.Substract(this.lastNumber, newNumber);
+                            break;
+                        case OperationType.Multiplication:
+                            result = SimpleMath.Multiply(this.lastNumber, newNumber);
+                            break;
+                        case OperationType.Division:
+                            result = SimpleMath.Divide(this.lastNumber, newNumber);
+                            break;
 
+                    }
+                    resultLabel.Content = result.ToString();
                 }
-                resultLabel.Content = result.ToString();
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Operation Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+              
             }
         }
 
@@ -145,6 +162,10 @@ namespace wpf_simpleCalculator
         }
         public static double Divide(double n1, double n2)
         {
+            if( n2 == 0)
+            {
+                throw new Exception("Division by Zero is not valid unless you are in other universe :D");
+            }
             return n1 / n2;
         }
 
