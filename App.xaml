@@ -3,7 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:wpf_simpleCalculator"
              StartupUri="MainWindow.xaml">
+    <!--For Application Styles globally -->
     <Application.Resources>
-         
+        <SolidColorBrush x:Key="numberColors" Color="#444444"></SolidColorBrush>
+        <SolidColorBrush x:Key="operatorColors" Color="Orange" ></SolidColorBrush>
+        <SolidColorBrush x:Key="numberFontColor" Color="White" ></SolidColorBrush>
     </Application.Resources>
 </Application>

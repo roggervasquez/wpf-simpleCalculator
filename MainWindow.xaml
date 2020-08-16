@@ -6,6 +6,13 @@
         xmlns:local="clr-namespace:wpf_simpleCalculator"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="350">
+
+    <!-- For styling window local resources-->
+    <Window.Resources>
+        <!--<SolidColorBrush x:Key="numberColors" Color="#444444"></SolidColorBrush>
+        <SolidColorBrush x:Key="operatorColors" Color="Orange" ></SolidColorBrush>-->
+    </Window.Resources>
+    
     <Grid x:Name="GridContainer" Margin="10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -33,36 +40,67 @@
         <Button x:Name="acButton"  Content="AC" Grid.Row="1"/>
         <Button x:Name="signButton" Content="+/-" Grid.Row="1" Grid.Column="1"/>
         <Button x:Name="percentageButton" Content="%" Grid.Row="1" Grid.Column="2"/>
-        <Button x:Name="divideButton" Click="OperationButton_Click" Content="/" Grid.Row="1" Grid.Column="3"/>
+        <Button x:Name="divideButton" 
+                Background="{StaticResource operatorColors}"
+                Click="OperationButton_Click" 
+                Content="/" Grid.Row="1" Grid.Column="3"/>
 
         <!-- Second  Row -->
-        <Button x:Name="n7Button" Click="Number_Click" Content="7" Grid.Row="2"/>
-        <Button x:Name="n8Button" Click="Number_Click" Content="8" Grid.Row="2" Grid.Column="1"/>
-        <Button x:Name="n9Button" Click="Number_Click" Content="9" Grid.Row="2" Grid.Column="2"/>
-        <Button x:Name="multiplyButton" Click="OperationButton_Click" Content="*" Grid.Row="2" Grid.Column="3"/>
+        <Button x:Name="n7Button" 
+                Background="{StaticResource numberColors}"
+                Click="Number_Click" Content="7" Grid.Row="2"/>
+        <Button x:Name="n8Button" 
+                Background="{StaticResource numberColors}"
+                Click="Number_Click" Content="8" Grid.Row="2" Grid.Column="1"/>
+        <Button x:Name="n9Button" 
+                Background="{StaticResource numberColors}"
+                Click="Number_Click" Content="9" Grid.Row="2" Grid.Column="2"/>
+        <Button x:Name="multiplyButton"
+                 Background="{StaticResource operatorColors}"
+                 Click="OperationButton_Click" 
+                Content="*" Grid.Row="2" Grid.Column="3"/>
 
         <!-- third  Row -->
-        <Button x:Name="n4Button"  Click="Number_Click" Content="4" Grid.Row="3"/>
-        <Button x:Name="n5Button"  Click="Number_Click" Content="5" Grid.Row="3" Grid.Column="1"/>
-        <Button x:Name="n6Button"  Click="Number_Click" Content="6" Grid.Row="3" Grid.Column="2"/>
-        <Button x:Name="substractButton" Click="OperationButton_Click" Content="-" Grid.Row="3" Grid.Column="3"/>
+        <Button x:Name="n4Button" 
+                Background="{StaticResource numberColors}"
+                Click="Number_Click" Content="4" Grid.Row="3"/>
+        <Button x:Name="n5Button" 
+                Background="{StaticResource numberColors}"
+                Click="Number_Click" Content="5" Grid.Row="3" Grid.Column="1"/>
+        <Button x:Name="n6Button" 
+                Background="{StaticResource numberColors}"
+                Click="Number_Click" Content="6" Grid.Row="3" Grid.Column="2"/>
+        <Button x:Name="substractButton" 
+                Background="{StaticResource operatorColors}"
+                Click="OperationButton_Click" 
+                Content="-" Grid.Row="3" Grid.Column="3"/>
 
         <!-- Fourth  Row -->
-        <Button  x:Name="n1Button"  Click="Number_Click" Content="1" Grid.Row="4"/>
-        <Button  x:Name="n2Button"  Click="Number_Click" Content="2" Grid.Row="4" Grid.Column="1"/>
-        <Button  x:Name="n3Button"  Click="Number_Click" Content="3" Grid.Row="4" Grid.Column="2"/>
-        <Button  x:Name="addButton" Click="OperationButton_Click" Content="+" Grid.Row="4" Grid.Column="3"/>
+        <Button  x:Name="n1Button" 
+                 Background="{StaticResource numberColors}"
+                 Click="Number_Click" Content="1" Grid.Row="4"/>
+        <Button  x:Name="n2Button" 
+                 Background="{StaticResource numberColors}"
+                 Click="Number_Click" Content="2" Grid.Row="4" Grid.Column="1"/>
+        <Button  x:Name="n3Button" 
+                 Background="{StaticResource numberColors}"
+                 Click="Number_Click" Content="3" Grid.Row="4" Grid.Column="2"/>
+        <Button  x:Name="addButton"
+                 Background="{StaticResource operatorColors}"
+                 Click="OperationButton_Click" 
+                 Content="+" Grid.Row="4" Grid.Column="3"/>
 
         <!-- Fifth  Row -->
-        <Button x:Name="n0Button"   Click="Number_Click"  Content="0" Grid.Row="5" Grid.ColumnSpan="2"/>
-        <Button x:Name="periodButton"  Content="." Grid.Row="5" Grid.Column="2" />
-        <Button x:Name="equalButton"  Content="=" Grid.Row="5" Grid.Column="3"/>
+        <Button x:Name="n0Button"  
+                Background="{StaticResource numberColors}"
+                Click="Number_Click"  Content="0" Grid.Row="5" Grid.ColumnSpan="2"/>
+        <Button x:Name="periodButton" 
+                Background="{StaticResource numberColors}"
+                Content="." Grid.Row="5" Grid.Column="2" />
+        <Button x:Name="equalButton" 
+                Background="{StaticResource operatorColors}"
+                Content="=" Grid.Row="5" Grid.Column="3"/>
         
-
-
-
-
-
 
     </Grid>
 </Window>
